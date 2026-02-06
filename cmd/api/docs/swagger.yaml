@@ -1,0 +1,30 @@
+info:
+  contact: {}
+  description: This is the API documentation for  project.
+  termsOfService: http://swagger.io/terms/
+  title: API documentation
+  version: "1.0"
+paths:
+  /cats/:
+    get:
+      consumes:
+      - application/json
+      description: get list of cats
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              type: string
+            type: array
+      summary: Get Cats
+      tags:
+      - cats
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
